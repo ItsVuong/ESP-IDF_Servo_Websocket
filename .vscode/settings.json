@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "cstdio": "cpp",
+        "complex": "c",
+        "freertos.h": "c",
+        "connect_wifi.h": "c",
+        "string": "c",
+        "ctype.h": "c"
+    },
+    "idf.adapterTargetName": "esp32"
+}

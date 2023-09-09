@@ -1,0 +1,26 @@
+[1/11] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\Code\esp_servo\joystick_server\build\bootloader\esp-idf\esptool_py && D:\IOT\ESP\Espressif\python_env\idf5.0_py3.8_env\Scripts\python.exe D:/IOT/ESP/Espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/Code/esp_servo/joystick_server/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6710 bytes. 0x8f0 bytes (8%) free.
+[2/9] cmd.exe /C "cd /D D:\Code\esp_servo\joystick_server\build\esp-idf\main && D:\IOT\ESP\Espressif\python_env\idf5.0_py3.8_env\Scripts\python.exe D:/IOT/ESP/Espressif/frameworks/esp-idf-v5.0.1/components/spiffs/spiffsgen.py 0x100000 D:/Code/esp_servo/joystick_server/data D:/Code/esp_servo/joystick_server/build/storage.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len"
+[3/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/server.c.obj
+In file included from D:/Code/esp_servo/joystick_server/main/server.c:7:
+D:/IOT/ESP/Espressif/frameworks/esp-idf-v5.0.1/components/spi_flash/include/esp_spi_flash.h:6:2: warning: #warning esp_spi_flash.h is deprecated, please use spi_flash_mmap.h instead [-Wcpp]
+    6 | #warning esp_spi_flash.h is deprecated, please use spi_flash_mmap.h instead
+      |  ^~~~~~~
+In file included from D:/Code/esp_servo/joystick_server/main/server.c:13:
+D:/Code/esp_servo/joystick_server/main/connect_wifi.c: In function 'wifi_connection':
+D:/Code/esp_servo/joystick_server/main/connect_wifi.c:65:21: warning: initialization of 'esp_err_t' {aka 'int'} from 'void *' makes integer from pointer without a cast [-Wint-conversion]
+   65 |     esp_err_t ret = NULL;
+      |                     ^~~~
+[4/9] Linking C static library esp-idf\main\libmain.a
+[5/9] Generating ld/sections.ld
+[6/9] Building C object CMakeFiles/server.elf.dir/project_elf_src_esp32.c.obj
+[7/9] Linking CXX executable server.elf
+[8/9] Generating binary image from built executable
+esptool.py v4.5
+Creating esp32 image...
+Merged 25 ELF sections
+Successfully created esp32 image.
+Generated D:/Code/esp_servo/joystick_server/build/server.bin
+[9/9] cmd.exe /C "cd /D D:\Code\esp_servo\joystick_server\build\esp-idf\esptool_py && D:\IOT\ESP\Espressif\python_env\idf5.0_py3.8_env\Scripts\python.exe D:/IOT/ESP/Espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/Code/esp_servo/joystick_server/build/partition_table/partition-table.bin D:/Code/esp_servo/joystick_server/build/server.bin"
+server.bin binary size 0xc6960 bytes. Smallest app partition is 0x100000 bytes. 0x396a0 bytes (22%) free.
